@@ -1,4 +1,4 @@
-public class NthBiggestElemnt {
+public class NthBiggestAndSmallestElement {
     static int[] sortArray(int[] arr){
         for(int i = 0; i < arr.length; i++){
             for(int j = i+1; j < arr.length; j++){
@@ -14,7 +14,7 @@ public class NthBiggestElemnt {
     
     public static void main(String[] args) {
         int[] arr = {2,5,1,7,9,11,12};
-        int target = 3;
+        int target = 4;
         int[] sortedArray = sortArray(arr);
         for (int i : sortedArray) {
             System.out.print(i+" ");
