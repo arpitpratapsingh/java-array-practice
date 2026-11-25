@@ -1,20 +1,24 @@
-public class Test {
+public class Test{
     public static void main(String[] args) {
-        int arr[] = {12,0,5,5,7,0,9};
-        int pos = arr.length-1;
+        int[] arr1 = {1,2,3,4};
+        int[] arr2 = {5,6,7,8};
         
-        for(int i = arr.length-1; i >= 0; i--){
-            if(arr[i] != 0){
-                arr[pos] = arr[i];
-                pos--;
-            }
+        int size = arr1.length+arr2.length;
+        
+        int[] mergedArray = new int[size];
+        int count = 0;
+        
+        for(int i = 0; i < arr1.length; i++){
+            mergedArray[count] = arr1[i];
+            count++;
         }
-        while(pos>=0){
-            arr[pos] = 0;
-            pos--;
+        for(int i = 0; i < arr2.length; i++){
+            mergedArray[count] = arr2[i];
+            count++;
         }
-        for (int i : arr) {
-            System.out.print(i+" ");
+        for (int i : mergedArray) {
+           System.out.print(i+" ");
         }
+
     }
 }
